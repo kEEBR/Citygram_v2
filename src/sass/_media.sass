@@ -1,0 +1,150 @@
+@media  ( max-width: 1200px  )
+    nav
+        padding: 13px 2px 13px 2px
+    .welcome
+        h1
+            font-size: 60px
+@media ( max-width: 1110px )
+    .main
+        &_img
+            width: 690px
+    .welcome
+        &_img
+            width: 390px
+            margin-top: 50px
+@media  ( max-width: 1023px )
+    .welcome
+        &_img
+            width: 292px
+            margin-top: 65px
+        h1
+            font-size: 50px
+            line-height: 65px
+@media ( max-width: 991px )
+    .welcome
+        h1
+            font-size: 44px
+            line-height: 54px
+        h2
+            font-size: 40px
+        &_trouble
+            font-size: 30px
+        &_click
+            font-size: 25px
+    .main
+        &_layers
+            align-items: center
+            flex-direction: column
+        &_layer
+            text-align: center
+        &_sublayer
+            text-align: center
+@media ( max-width: 767px )
+    .main
+        &_img
+            display: block
+            margin: 0 auto
+            width: 500px
+        &_title
+            text-align: center
+        &_subtitle
+    .welcome
+        &_img
+            display: block
+            margin-top: 40px
+            margin-left: 50%
+            width: 300px
+        &_btn
+            display: block
+            margin: 0 auto
+
+    h1
+        text-align: center
+    h2
+        text-align: center
+    .menu
+        position: fixed
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        top: 0
+        left: -100%
+        width: 50%
+        height: 100vh
+        padding: 20px 15px
+        background-color: rgba(0,0,0, .8)
+        transition: 0.6s all
+        &_active 
+            left: 0
+        &_link 
+            padding-right: 0
+            border: none
+            margin: 10px 0
+        a
+            font-size: 20px
+        &_item
+            color: #fff
+            margin-top: 20px
+        &_btn
+            background-color: rgba(0,0,0, .0)
+            color: #fff
+            &:hover
+                background-color: #00BC87
+                color: #fff
+    .hamburger
+        display: block
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        width: 26px
+        height: 12px
+        span 
+            display: block
+            height: 3px
+            width: 100%
+            background-color: #00BC87
+            margin-bottom: 2px
+            transition: 0.5s all
+        &_active 
+            span 
+                margin-bottom: -2px
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: translateY(3px) rotate(45deg)
+@media  ( max-width: 525px )
+    .welcome
+        &_img
+            display: none
+    .main
+        &_img
+            width: 320px
+        &_round
+            &_yellow
+                margin-right: 0
+            &_red
+                margin-right: 0
+            &_blue
+                margin-right: 0
+    .menu 
+        width: 85%
+        &_item 
+            width: 100%
+            text-align: center
+            padding: 5px 0
+        &_link
+            display: block
+        &_btn
+            display: block
+            margin: 0 auto
+    .about
+        &_btn
+            display: block
+            margin: 0 auto
+            margin-top: 15px
+            width: 250px
+        &_text
+            text-align: center
