@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!$_SESSION['user'] || $_SESSION['user']['role']!="Администратор" && $_SESSION['user']['role']!="Госслужащий") {
+  header('Location: ../login.php');
+}
 $connect = mysqli_connect( 'localhost', 'root',  'root',  'citygram');
 include("includes/header.php");
 if($_POST['user_id']>0)

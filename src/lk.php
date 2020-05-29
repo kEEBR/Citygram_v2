@@ -46,10 +46,6 @@ include("header/header_auth.php");
             <div class="news_login">
               <?=$article['login']?>
             </div>
-            <div class="news_likes">
-            <span class="view-count"></span>
-                  <span class="like-count"><?=$article['likes']?></span>
-            </div>
             </div>
           </div>
       </div>
@@ -60,7 +56,7 @@ include("header/header_auth.php");
 </div>
     </section>
 <?php
-include("footer/footer.php");
+include("footer/footer_auth.php");
 ?>
 
 

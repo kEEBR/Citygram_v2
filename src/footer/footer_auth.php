@@ -3,7 +3,7 @@
         <div class="troubles_label">Проблемы</div>
         <div class="troubles_title">По всему городу</div>
         <div class="troubles_subtitle">Решаем в один клик</div>
-        <div class="troubles_footer"><a href="news_lenta.php">Посмотреть все проблемы</a></div>
+        <div class="troubles_footer"><a href="news_auth.php">Посмотреть все проблемы</a></div>
       </div>
     </section>
     <footer class="footer">

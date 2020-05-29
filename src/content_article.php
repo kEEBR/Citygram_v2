@@ -10,7 +10,6 @@
     exit();
   }
   $page = $_GET['id_n'];
-
   $query = mysqli_query($connection, "SELECT * FROM news WHERE id_n='$page'");
 ?>
 <!DOCTYPE html>
@@ -41,9 +40,6 @@
           <a href="about_auth.php" class="menu_link">
             <li class="menu_item">О нас</li>
           </a>
-          <a href="#" class="menu_link">
-            <li class="menu_item">Карта</li>
-          </a>
           <a href="news_auth.php" class="menu_link">
             <li class="menu_item">Лента</li>
           </a>
@@ -71,16 +67,12 @@ while($article = mysqli_fetch_assoc($query)){?>
       <h1 class="article_title">
         <?=$article['title']?>
       </h1>
+      <div class="article_adres">Адрес: <span class="article_status"><?=$article['adres']?></span></div>
       <div class="article_info">
-          <div class="article_likes">
-              <a src="#" alt="" class="button-like">
-              <span class="article_eye"></span>
-              <span class="article_like"></span>
-              </a>
-              </div>
             <?=$article['likes']?>
           </div>
       <img src="<?=$article['picture']?>" alt="" class='article_img'/>
+      <div class="article_date">Дата записи: <?=$article['date']?></div>
         <div class="article_descr">
           <?=$article['descr']?>
         </div> 
@@ -92,35 +84,33 @@ while($article = mysqli_fetch_assoc($query)){?>
 </div>
     </div>
     <div class="container">
-    <div id="disqus_thread" class="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-this.page.url = content_article.php;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://citygram-1.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
+    <form action="vendor/comments.php" method="POST" class="comments_form">
+    <input name="login" type="text" class="none" value="<?=$_SESSION['user']['login']?>">
+    <input name="roll" type="text" class="none" value="<?=$_SESSION['user']['role']?>">
+    <input type="text" name="id_n" class="none" value="<?=$page?>">
+    <label for="" class="comments_label">Комментарии</label>
+    <textarea name="comm" id="form10" class="md-textarea form-control" cols="150" rows="8"></textarea>
+    <button type="submit" class="comments_btn">Отправить</button>
+    </form>
+    <div class="comments">
+    <?php 
+    $comments = mysqli_query($connection,"SELECT * FROM `comments` WHERE `id_n` = '$page' and `st` = 'ok'");
+    while($comment = mysqli_fetch_assoc($comments)){?>
+    <div class="comments_wrapper">
+    <div class="comments_login"><?=$comment['login']?> <span><?=$comment['role']?></span></div>
+    <div class="comments_descr"><?=$comment['descr']?></div>
+    <div class="comments_data"><?=$comment['date']?></div>
+    </div>
+     <?php
+    }
+    ?>
+    </div>
     </div>
     </div>
     </section>
-    <section class="troubles">
-      <div class="container">
-        <div class="troubles_label">Проблемы</div>
-        <div class="troubles_title">По всему городу</div>
-        <div class="troubles_subtitle">Решаем в один клик</div>
-        <div class="troubles_footer">Посмотреть все проблемы</div>
-      </div>
-    </section>
-    <footer class="footer">
-      <a href="tel:88000000000" class="footer_tel">8(800)000-00-00</a>
-      <div class="footer_underline"></div>
-    </footer>
+<?php
+include("footer/footer_auth.php");
+?>
     <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/50fff6b33b.js" crossorigin="anonymous"></script>
     <script

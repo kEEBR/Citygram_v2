@@ -12,7 +12,6 @@
                 >Власть на расстоянии клика</span
               >
             </h2>
-            <button class="welcome_btn">Обращение</button>
           </div>
           <div class="col-6 col-md-3">
             <img src="img/Map.png" alt="" class="welcome_img" />

@@ -9,5 +9,5 @@ include("about/info.php");
 include("about/about.php");
 include("about/slider.php");
 include("about/virtues.php");
-include("footer/footer.php");
+include("footer/footer_auth.php");
 ?>

@@ -23,17 +23,11 @@ $cnt = 0;
       <tr>
         <th>№</th>
         <th>Логин</th>
-        <th>Статус</th>
         <th>Роль</th>
       </tr>
     </thead>
     <tbody>
 <?php
- $all_statuses = mysqli_query($connect, "SELECT * FROM `category` WHERE `status` = 'ok' and `url` = 'list-status.php' ");
- $all_statuses_array = array();
-        while($status = mysqli_fetch_assoc($all_statuses)){
-            array_push($all_statuses_array,$status['name']);
-        }
  $all_roles = mysqli_query($connect, "SELECT * FROM `category` WHERE `status` = 'ok' and `url` = 'list-role.php' ");
  $all_roles_array = array();
     while($role = mysqli_fetch_assoc($all_roles)){

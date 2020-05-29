@@ -7,9 +7,6 @@
           <a href="about_auth.php" class="menu_link">
             <li class="menu_item">О нас</li>
           </a>
-          <a href="#" class="menu_link">
-            <li class="menu_item">Карта</li>
-          </a>
           <a href="news_auth.php" class="menu_link">
             <li class="menu_item">Лента</li>
           </a>

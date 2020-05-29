@@ -7,6 +7,6 @@ include("mainPage/docktype.php");
 include("header/header_auth.php");
 include("mainPage/welcome.php");
 include("mainPage/main.php");
-include("footer/footer.php");
+include("footer/footer_auth.php");
 ?>
 

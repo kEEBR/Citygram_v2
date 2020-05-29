@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!$_SESSION['user'] || $_SESSION['user']['role']!="Администратор" && $_SESSION['user']['role']!="Чиновник") {
+if (!$_SESSION['user']) {
     header("Location: ../login.php");
 }
 
@@ -38,11 +38,13 @@ if (!$_SESSION['user'] || $_SESSION['user']['role']!="Администратор
           <a class="dropdown-item" href="list-role.php">Роли пользователей</a>
           <a class="dropdown-item" href="settings-user-role.php">Настройки</a>
           <a class="dropdown-item" href="list-status.php">Статусы пользователей</a>
+          <a class="dropdown-item" href="list-post.php">Управление постами</a>
+          <a class="dropdown-item" href="list-comments.php">Управление комментариями</a>
         </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Панель Чиновника
+          Панель Госслужащего
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="list-troubles.php">Статус проблем</a>

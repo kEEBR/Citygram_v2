@@ -263,6 +263,8 @@ nav
 		font-size: 20px
 		line-height: 24px
 		color: #000000
+
+		
 .troubles
 	min-height: 499px
 	padding: 52px 0 9px 0
@@ -308,6 +310,16 @@ nav
 		text-align: center
 		text-transform: uppercase
 		color: #FFFFFF
+		a
+			font-family: "Proxima-nova Regular", sans-serif
+			font-style: normal
+			margin-top: 306px
+			font-weight: normal
+			font-size: 29px
+			line-height: 35px
+			text-align: center
+			text-transform: uppercase
+			color: #FFFFFF
 .footer
 	min-height: 42px
 	padding: 0
@@ -829,10 +841,18 @@ nav
 		font-size: 18px
 		width: 100%
 		justify-content: space-between
-		
 	&_status
 		font-family: "Proxima-nova Semibold", sans-serif
 		text-transform: uppercase
+	&_adres
+		font-family: "Proxima-nova Regular", sans-serif
+		font-size: 18px
+	&_date
+		font-family: "Proxima-nova Regular", sans-serif
+		display: flex
+		width: 100%
+		justify-content: flex-end
+		color: #5f5f5ffd
 .view-count
 	&::before
 		content: "\f06e"
@@ -845,4 +865,40 @@ nav
 		margin-right: 5px
 .margin
 	margin-top: 50px
-
+.comments
+	margin-top: 50px
+	margin-bottom: 50px
+	&_form
+		margin-top: 60px
+	&_label
+		font-family: "Proxima-nova Semibold", sans-serif
+		font-size: 26px
+	&_wrapper
+		display: flex
+		justify-content: space-between
+		border: 1px #e3e3e3e3 solid
+		margin-top: 20px
+		
+	&_login
+		display: flex
+		font-family: "Proxima-nova Semibold", sans-serif
+		font-size: 24px
+		border-right: 1px solid #e3e3e3e3
+		width: 300px	
+		padding-left: 10px
+		span
+			font-size: 14px
+			color: #00BC87
+	&_descr
+		font-family: "Proxima-nova Regular", sans-serif
+		font-size: 20px
+		width: 100%
+		padding-left: 10px
+	&_data
+		width: 300px
+		text-align: right
+		padding-right: 10px
+	&_btn
+		margin-top: 20px
+.post_img
+	width: 100px

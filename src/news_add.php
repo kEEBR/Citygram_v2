@@ -7,5 +7,5 @@ include("news/docktype.php");
 include("header/header_auth.php");
 include("addNews/info.php");
 include("addNews/form.php");
-include("footer/footer.php");
+include("footer/footer_auth.php");
 ?>

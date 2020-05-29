@@ -14,7 +14,7 @@
           <div class="col-md-4">
             <div class="main_layers">
               <div class="main_round">
-                <img src="icons/Shape.png" alt="Shape" />
+                <img src="icons/Shape.png" alt="Shape"/>
               </div>
               <div class="main_descr">
                 <div class="main_layer">Делись</div>
